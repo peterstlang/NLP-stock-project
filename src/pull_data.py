@@ -75,9 +75,9 @@ if __name__ == "__main__":
         data.append(encoded_dict)
 
     # Write dictionaries to the CSV file
-    csv_file_path = 'data/news_headlines.csv'
+    csv_file_path = 'C:/Users/peter/Documents/NLP-stock-project/data/news_headlines.csv'
 
-    with open(csv_file_path, 'w', newline='', encoding='utf-8') as csvfile:
+    with open(csv_file_path, 'a', newline='', encoding='utf-8') as csvfile:
         # Define the header fields for the CSV file
         fieldnames = ["Title", "Description", "Source", "Published At"]
         
@@ -93,3 +93,5 @@ if __name__ == "__main__":
             encoded_row = {k: v.encode(sys.stdout.encoding, errors='replace').decode(sys.stdout.encoding) 
                             if isinstance(v, str) else v for k, v in row.items()}
             csv_writer.writerow(encoded_row)
+
+        print("It was a success!")
