@@ -95,3 +95,4 @@ if __name__ == "__main__":
             csv_writer.writerow(encoded_row)
 
         print("It was a success!")
+
